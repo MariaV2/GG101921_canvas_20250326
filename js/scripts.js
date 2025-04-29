@@ -2,7 +2,6 @@ var canvas_tres = document.getElementById("lienzo-tres");
 var canvas_cuatro = document.getElementById("lienzo-cuatro");
 var canvas_cinco = document.getElementById("lienzo-cinco");
 
-
 if (canvas_tres.getContext){
     console.log("si se soporta el contexto");
 //Obtiene el contexto del objeto canvas
@@ -18,7 +17,6 @@ if (canvas_tres.getContext){
     ctx_3.fillRect(50,50,55,50); // Dibuja un objeto en la posicion x=10 y=10 ancho 55px alto 50px
 
 
-
 }
 else{
     console.log("no se soporta el contexto");
@@ -32,7 +30,7 @@ if (canvas_cuatro.getContext){
     ctx_4.beginPath() //Inicia un trazado
     ctx_4.moveTo(5,5); // Coloca el puntero en la posicion 5,5
     ctx_4.lineTo(125,125); //Traza una linea hasta la posicion 120,120
-    ctx_4.StrokeStyle = "#FFFFF"
+    ctx_4.strokeStyle = "#FFFFFF";
     ctx_4.stroke();
 }
 else{
@@ -45,7 +43,7 @@ if (canvas_cinco.getContext){
     var ctx_5 = canvas_cinco.getContext("2d");
 
     ctx_5.beginPath() //Inicia un trazado
-    ctx_5.setLineDash([5,15]); // establce una linea punteada con 15 pixeles dibujados 
+    ctx_5.setLineDash([5,5]); // establce una linea punteada con 15 pixeles dibujados 
     ctx_5.moveTo(0,40); //coloca en x = 0, y = 40
     ctx_5.lineTo(150,40);
     ctx_5.strokeStyle = "#FFFFFF"
